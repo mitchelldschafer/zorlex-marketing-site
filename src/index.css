@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-dark: #08080E;
+    --color-dark-surface: #131320;
+    --color-light: #FAFAFF;
+    --color-light-surface: #EEEEF5;
+    --color-accent: #7B6BFF;
+    --color-accent-hover: #9A8EFF;
+    --color-muted: #787890;
+    --color-border: #DDDDE8;
+
+    --space-xs: 8px;
+    --space-s: 16px;
+    --space-m: 24px;
+    --space-l: 40px;
+    --space-xl: 60px;
+    --space-2xl: 80px;
+    --space-3xl: 120px;
+    --space-4xl: 160px;
+    --space-5xl: 200px;
+  }
+
+  body {
+    @apply bg-dark text-light font-body antialiased selection:bg-accent selection:text-white overflow-x-hidden;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading tracking-[-0.04em];
+  }
+}
+
+@layer utilities {
+  .masked-word {
+    background-size: cover;
+    background-position: center;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+}
